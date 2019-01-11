@@ -1,0 +1,36 @@
+<!--pages/video-edit/video-edit.wxml-->
+<view class="bg">
+  <view class="height100">
+    <view class="block-white marT2 padT4 border-box">
+      <view class="module-title song-title">
+        <text class="title">网络初赛视频一 </text>
+        <text class="subtitle">要求与现场复赛曲目一致</text>
+      </view>
+      <view class="video marT4 marL2 marB4 marR2">
+        <video id="myvedio" src="{{videoSrc}}" controls>
+        <!-- <cover-view wx:if="{{videoShow}}" bindtap="playVideo">
+          <cover-image class="poster" src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/video.png" ></cover-image>
+          <cover-image class="play-btn" src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/play.png"></cover-image>
+        </cover-view> -->
+        <cover-view class="revise" bindtap="chooseVideo">修改视频</cover-view>
+        </video>
+        
+      </view>
+      <form bindsubmit="formSubmit">
+      <view class="song-info">
+        <view class="one-item">
+          <view class="item-name"><text class="mark">*</text><text class="name"> 曲目名</text></view>
+          <view class="item-info"><input class="info" placeholder="作品号_调性_曲目编号（要求原文）" name="song" value="{{song}}" bindinput='inputSong'/></view>
+        </view>
+        <view class="one-item">
+          <view class="item-name"><text class="mark">*</text><text class="name">作曲家</text></view>
+          <view class="item-info"><input class="info" placeholder="请填写作曲家原文名称" name="composer" value="{{composer}}" bindinput='inputComposer'/></view>
+        </view>
+      </view>
+      <view class="jc-center marT6">
+        <button class="button2" data-type='3' form-type="submit">保存</button>
+      </view>
+      </form>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,62 @@
+<!--pages/voting-group/voting-group.wxml-->
+<view class="bg vh100">
+  <view class="wrap">
+    <!-- 分组 -->
+    <view class="group" data-id="{{groupId[index]}}" wx:for="{{group}}" wx:key="index" bindtap='tovotinglist'>
+      <image src="{{groupPic[index]}}" style="width:200rpx; height:200rpx;"></image>
+      <view class="ranking">
+        <view class="r-item">
+          <view class="title"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/rank-s1.png" style="width:32rpx; height:42rpx;"></image><text class="name">{{item.rank[0].nickname}}</text></view>
+          <text class="num">{{item.rank[0].vote_num}}</text>
+        </view>
+        <view class="r-item">
+          <view class="title"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/rank-s2.png" style="width:32rpx; height:42rpx;"></image><text class="name">{{item.rank[1].nickname}}</text></view>
+          <text class="num">{{item.rank[1].vote_num}}</text>
+        </view>
+        <view class="r-item">
+          <view class="title"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/rank-s3.png" style="width:32rpx; height:42rpx;"></image><text class="name">{{item.rank[2].nickname}}</text></view>
+          <text class="num">{{item.rank[2].vote_num}}</text>
+        </view>
+      </view>
+      <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/more.png" style="width:20rpx; height:34rpx;"></image>
+    </view>
+    <!-- 分组 -->
+    <!-- <view class="group" data-id="{{n2}}" bindtap='tovotinglist'>
+      <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/group2.png" style="width:200rpx; height:200rpx;"></image>
+      <view class="ranking">
+        <view class="r-item">
+          <view class="title"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/rank-s1.png" style="width:32rpx; height:42rpx;"></image><text class="name">{{group[1].rank[0].nickname}}</text></view>
+          <text class="num">{{group[1].rank[0].vote_num}}</text>
+        </view>
+        <view class="r-item">
+          <view class="title"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/rank-s2.png" style="width:32rpx; height:42rpx;"></image><text class="name">{{group[1].rank[1].nickname}}</text></view>
+          <text class="num">{{group[1].rank[1].vote_num}}</text>
+        </view>
+        <view class="r-item">
+          <view class="title"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/rank-s3.png" style="width:32rpx; height:42rpx;"></image><text class="name">{{group[1].rank[2].nickname}}</text></view>
+          <text class="num">{{group[1].rank[2].vote_num}}</text>
+        </view>
+      </view>
+      <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/more.png" style="width:20rpx; height:34rpx;"></image>
+    </view> -->
+    <!-- 分组 -->
+    <!-- <view class="group" data-id="{{n3}}" bindtap='tovotinglist'>
+      <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/group3.png" style="width:200rpx; height:200rpx;"></image>
+      <view class="ranking">
+        <view class="r-item">
+          <view class="title"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/rank-s1.png" style="width:32rpx; height:42rpx;"></image><text class="name">{{group[2].rank[0].nickname}}</text></view>
+          <text class="num">{{group[2].rank[0].vote_num}}</text>
+        </view>
+        <view class="r-item">
+          <view class="title"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/rank-s2.png" style="width:32rpx; height:42rpx;"></image><text class="name">{{group[2].rank[1].nickname}}</text></view>
+          <text class="num">{{group[2].rank[1].vote_num}}</text>
+        </view>
+        <view class="r-item">
+          <view class="title"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/rank-s3.png" style="width:32rpx; height:42rpx;"></image><text class="name">{{group[2].rank[2].nickname}}</text></view>
+          <text class="num">{{group[2].rank[2].vote_num}}</text>
+        </view>
+      </view>
+      <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/more.png" style="width:20rpx; height:34rpx;"></image>
+    </view> -->
+  </view>
+</view>

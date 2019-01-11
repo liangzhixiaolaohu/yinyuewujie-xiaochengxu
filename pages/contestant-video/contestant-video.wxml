@@ -1,0 +1,72 @@
+<!--pages/contestant-video/contestant-video.wxml-->
+<image class='top-bg' src='https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/top-bg.png' style='width:750rpx; height:268rpx;'></image>
+<view class='box'>
+<view class="result">
+  <image class="head-portrait" src="{{avatar}}"></image>
+  <span class="name">{{name}}</span>
+  <view class="votes">
+    <image class="votes-icon" wx:if="{{rank<4}}" src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/votes-icon{{rank}}.png"></image>
+    <span class="num">{{vote}}</span>
+    <image class="unit" src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/piao.png"></image>
+  </view>
+</view>
+<view class="video-title font-size-0">
+  <span class="text">网络初赛视频</span>
+</view>
+<view class="video-box">
+  <view class="scroll">
+    <view class="scroll-con">
+      <view class="scroll-list">
+        <view class="video-item" wx:for="{{song}}" wx:key="index">
+          <view class="video">
+            <video class='video-show' src="{{item.video_url}}" poster="{{item.image_url}}" controls></video>
+            <!-- <image class="play-btn" src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/play.png"></image> -->
+          </view>
+          <view class="video-intr">
+            <span class="text24 strong">曲目名：{{item.song}}</span>
+            <span class="text24 tint">作曲家：{{item.composer}}</span>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="jc-center">
+  <span class="button2" bindtap="toVote">投票</span>
+</view>
+</view>
+<!-- 弹层 -->
+<div class="mask" wx:if="{{showPop}}">
+  <!-- <div class="pop">
+    <div class="title">
+      <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/notice-icon.png" style="width:.52rem; height:.52rem;"></image><span class="name">投票须知</span>
+    </div>
+    <div class="pop-content">
+      <span class="text block marT4">投票时间</span>
+      <span class="strip block">2018年1月1日-2018年2月1日</span>
+      <span class="text block marT4">投票规则</span>
+      <span class="strip block">每位用户每日享有3张投票权，且不限制组别，一天只能为同一参赛者投票一次。</span>
+      <span class="text block marT4">评选规则</span>
+      <span class="strip block">活动时间内，根据参赛者最终的票数，每个组别票数最多者获得该组网络人气奖。</span>
+      <span class="text20 block marT4">如出现恶意刷票等违规行为, 组委会有权取消选手的网络评选资格</span>
+    </div>
+    <div class="close">
+      <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/close2.png" style="width:64rpx; height:64rpx;"></image>
+    </div>
+  </div> -->
+  <div class="pop pop-vote">
+    <div class="pop-content pop-content-vote">
+      <image class="headpic" src="{{avatar}}" style="width:160rpx; height:160rpx;"></image>
+      <span class="name">{{name}}</span>
+      <span class="rank">暂列第{{rank}}名</span>
+      <div class="ballot">
+        <span class="num" wx:for="{{voteArr}}" wx:key="index">{{item}}</span>
+        <span>票</span>
+      </div>
+      <span class="toHelp" style="display:none">分享为TA助力</span>
+    </div>
+    <div class="close" bindtap="closePop">
+      <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/close2.png" style="width:64rpx; height:64rpx;"></image>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<!--pages/match-result/match-result.wxml-->
+<import src="../../static/wxParse/wxParse.wxml" />
+<view class="bg vh100">
+  <view class="block-white border-top">
+    <view class="p-tab" bindtap="toTab">
+      <span class="tab-item {{type == 1 ? 'on' : ''}}" data-type="1">活动评估</span>
+      <span class="tab-item {{type == 2 ? 'on' : ''}}" data-type="2">录取名单</span>
+    </view>
+  </view>
+  <view class='block-white height100'>
+      <view class='wrap padT2 padB2' wx:if="{{type == 1}}">
+        <!-- {{item.content}} -->
+        <template is="wxParse" data="{{wxParseData:article1.nodes}}" />
+      </view>
+      <view class='wrap padT2 padB2' wx:elif="{{type == 2}}">
+        <template is="wxParse" data="{{wxParseData:article2.nodes}}" />
+      </view>
+  </view>
+</view>

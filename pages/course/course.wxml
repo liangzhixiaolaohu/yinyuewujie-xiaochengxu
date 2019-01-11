@@ -1,0 +1,54 @@
+<!--pages/course/course.wxml-->
+<view class="bg vh100">
+  <view class="block-white border-top">
+    <view class="p-tab">
+      <span class="tab-item {{type == 1 ? 'on' : ''}}" data-type='1' bindtap="toTab">大师课</span>
+      <span class="tab-item {{type == 2 ? 'on' : ''}}" data-type='2' bindtap="toTab">一对一小课</span>
+    </view>
+  </view>
+  <view class="wrap" wx:if="{{type == 1}}">
+    <!-- 分组 -->
+    <view class="area radius10 marB2" wx:for="{{course}}" wx:key="index" wx:if="{{item.type == 1}}">
+      <view class="package">
+        <view class="p-pic">
+          <image src="{{item.avatar}}" mode="widthFix" data-id="{{item.jury_id}}" data-fee="{{item.fee}}" bindtap='courseDetails'></image>
+          <span class="tips">剩余{{item.sale_quantity}}个名额</span>
+        </view>
+        <view class="p-intr">
+          <view class="p-top">
+            <view class="pt-left">
+              <span class="text strong block" data-id="{{item.jury_id}}"  data-fee="{{item.fee}}" bindtap='courseDetails'>{{item.name}}</span><span class="p-origin block">{{item.school}} 丨 {{item.title}}</span>
+            </view>
+          </view>
+          <view class="p-bottom">
+            <span class="text strong">¥{{item.fee}}</span>
+            <span class="button{{item.status}}" data-course="{{simpleCourse[index]}}" data-type="大师课" data-avatar="{{item.avatar}}" data-name="{{item.name}}" data-school="{{item.school}}" data-title="{{item.title}}" data-fee="{{item.fee}}" bindtap="toBuy" style="display:none">购买</span>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="wrap" wx:elif="{{type == 2}}">
+    <!-- 分组 -->
+    <view class="area radius10 marB2" wx:for="{{course}}" wx:key="index" wx:if="{{item.type == 2}}">
+      <view class="package">
+        <view class="p-pic">
+          <image src="{{item.avatar}}" mode="widthFix" data-id="{{item.jury_id}}" data-fee="{{item.fee}}" bindtap='courseDetails'></image>
+          <span class="tips">剩余{{item.sale_quantity}}个名额</span>
+        </view>
+        <view class="p-intr">
+          <view class="p-top">
+            <view class="pt-left">
+              <span class="text strong block" data-id="{{item.jury_id}}"  data-fee="{{item.fee}}" bindtap='courseDetails'>{{item.name}}</span><span class="p-origin block">{{item.school}} 丨 {{item.title}}</span>
+            </view>
+          </view>
+          <view class="p-bottom">
+            <span class="text strong">¥{{item.fee}}</span>
+            <span class="button{{item.status}}" data-course="{{simpleCourse[index]}}" data-type="一对一小课" data-avatar="{{item.avatar}}" data-name="{{item.name}}" data-school="{{item.school}}" data-title="{{item.title}}" data-fee="{{item.fee}}" bindtap="toBuy" style="display:none">购买</span>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

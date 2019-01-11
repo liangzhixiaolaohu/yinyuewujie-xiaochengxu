@@ -1,0 +1,37 @@
+<!--pages/course-details/course-details.wxml-->
+<import src="../../static/wxParse/wxParse.wxml" />
+<view class="vh100">
+  <view class="head">
+    <image class='avatar' src="{{content.avatar}}" mode='widthFix'></image>
+    <view class="info-bg">
+      <view class="info">
+        <span class="name">{{content.name}}</span>
+        <span class="title">{{content.school}} 丨 {{content.title}}</span>
+        <span class="price">¥{{fee}}/课时</span>
+      </view>
+    </view>
+  </view>
+  <view class="tips">
+    <span>提示：大师课30分钟/课时，每人仅限购买同一大师一节课 </span>
+  </view>
+  <view class="wrap">
+    <view class="title marT4 marB2" style='display:none'>购买数量</view>
+    <view class="counter" style='display:none'>
+      <view class="count">
+        <view class="symbol"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/minus.png" style="width:16rpx; height:2rpx;"></image></view>
+        <span class="num">1</span>
+        <view class="symbol"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/add.png" style="width:16rpx; height:16rpx;"></image></view>
+      </view>
+    </view>
+    <view class="title marT3 marB2">大师简介</view>
+    <view class="content">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+  </view>
+  <!-- 底部栏 -->
+  <view class="bottom-bar" style='display:none'>
+    <span class="s-car-icon"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/car.png" style="width:42rpx; height:40rpx;"></image></span>
+    <span class="add-to-cart">加入购物车</span>
+    <span class="to-buy">立即购买</span>
+  </view>
+</view>

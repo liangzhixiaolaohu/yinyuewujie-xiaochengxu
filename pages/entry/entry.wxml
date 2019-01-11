@@ -1,0 +1,70 @@
+<!--pages/entry/entry.wxml-->
+<view class="bg">
+  <!-- 流程 -->
+  <view class="wrap">
+    <view class="master-item">
+      <span class="marker marker{{n}}"></span>
+      <view class="step">
+        <span class="fp-name fp-name{{n}}">提交报名完整流程：</span>
+        <span class="a-bout">1.完整填写或上传所有必填资料。</span>
+        <span class="a-bout">2.完成报名费用的支付</span>
+      </view>
+      <view class="state"><view class="s-icon s-icon{{matchInfo.info.status}}"></view><span class="s-text s-text{{matchInfo.info.status}}">已完成</span></view>
+    </view>
+    <!-- 入口 -->
+    <view class="fp-item">
+      <view class="item-name">
+        <view class="i-icon i-icon1"></view>
+        <text class="i-name">基本资料</text>
+      </view>
+      <view class="i-more">
+        <navigator
+          url="../personal/personal"
+          hover-class='none'
+        >
+        <text class="text">已完成</text>
+        <view class="arrow"></view>
+        </navigator>
+      </view>
+    </view>
+    <!-- 入口 -->
+    <view class="fp-item" wx:if="{{matchInfo.song}}">
+      <view class="item-name">
+        <view class="i-icon i-icon2"></view>
+        <text class="i-name">参赛曲目</text>
+      </view>
+      <view class="i-more" bindtap='toSong'>
+        <text class="text">已完成</text>
+        <view class="arrow"></view>
+      </view>
+    </view>
+    <!-- 入口 -->
+    <view class="fp-item" wx:if="{{matchInfo.video}}">
+      <view class="item-name">
+        <view class="i-icon i-icon3"></view>
+        <text class="i-name">参赛视频</text>
+      </view>
+      <view class="i-more">
+        <navigator
+          url="../video/video"
+          hover-class='none'
+        >
+        <text class="text">已完成</text>
+        <view class="arrow"></view>
+        </navigator>
+      </view>
+    </view>
+    <!-- 入口 -->
+    <view class="fp-item">
+      <view class="item-name">
+        <view class="i-icon i-icon4"></view>
+        <text class="i-name">支付费用</text>
+        <text class="cost">¥{{matchInfo.pay.fee}}</text>
+      </view>
+      <view class="i-more" bindtap='toBuy'>
+        <text class="text">已完成</text>
+        <view class="arrow"></view>
+      </view>
+    </view>
+  </view>
+</view>

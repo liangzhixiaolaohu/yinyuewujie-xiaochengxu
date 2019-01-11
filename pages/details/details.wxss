@@ -1,0 +1,48 @@
+/* pages/details/details.wxss */
+.act-intr{ display:flex; justify-content:space-between; align-items:center; padding-top:20rpx;}
+.act-head{ width:119rpx; height: 117rpx; margin:0 20rpx;}
+.act-info{ width:550rpx;}
+.act-info .name{ font-size:28rpx; color:#555555; font-weight: 700; line-height: 40rpx; padding:10rpx; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; display:block; width:530rpx;}
+.act-info .info{ font-size:22rpx; color:#999999; line-height: 30rpx; padding:4rpx; display:block;}
+
+.cost{ font-size:20rpx; color:#999999; display:flex; justify-content:space-around; text-align:center; padding:50rpx 50rpx 0;}
+.cost .price{ display: block; font-size:36rpx; color:#555555; font-weight:700;}
+.entry{ display:flex; justify-content:space-around;}
+.entry-one{ font-size:24rpx; color:#555555;}
+.entry-one image{ width:100rpx; height: 100rpx;}
+.entry-one .name{ display: block; padding:12rpx 0;}
+
+.scroll{ margin-bottom:50rpx;}
+.scroll .title{display:flex; justify-content:space-between; color:#555555; margin-bottom:20rpx;}
+.scroll .title em{ font-size:24rpx;}
+.scroll .title span{ font-size:36rpx; font-weight: 700;}
+.scroll-con{ width:730rpx; overflow: hidden;}
+.scroll-list{overflow: hidden; overflow-x: scroll; -webkit-overflow-scrolling: touch; white-space: nowrap;}
+.scroll-list::-webkit-scrollbar { display: none;}
+
+.list-line{ font-size:0;}
+.list-line .rater{ display:inline-block; text-align:center; margin-top:40rpx; overflow: hidden; font-size:0; margin-right:40rpx; width:192rpx}
+.list-line .rater image{ width:120rpx; height: 120rpx; border-radius:50%;}
+.list-line .name{ font-size:24rpx; color:#555555; display:block; padding:15rpx 0 5rpx; max-width:192rpx; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.list-line .school{ font-size:20rpx; color:#B4B4B4; max-width:192rpx; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+.pad-block{ padding:40rpx 0; border-top:1px solid #F5F5F5;}
+.par{ font-size:24rpx; color:#555555; line-height: 40rpx; margin-top:20rpx; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;}
+
+.layer-bg{ background:rgba(0,0,0,0.3); position:fixed; left:0; top:0; right:0; bottom:0;}
+.layer{ background:#F5F5F5; position:fixed; left:0; bottom:0; width:710rpx; clear: both; border-radius:20rpx 20rpx 0 0; padding:80rpx 20rpx 60rpx;}
+.layer .close{ position:absolute; width:28rpx; height: 28rpx; top:20rpx; right:20rpx; background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/close.png) no-repeat; background-size:contain;}
+.layer .title{ font-size:34rpx; color:#000000; text-align:center; display:block; font-weight:700; padding-bottom:12rpx;}
+.layer .item{ background:#ffffff; border-radius:5px; box-sizing:border-box; font-size:24rpx; color:#555555; display: flex; padding:40rpx 40rpx 40rpx 28rpx; margin-top:20rpx;}
+.borderR1{ border-right:10rpx solid #fd4e61;}
+.borderR2{ border-right:10rpx solid #4285fc;}
+.layer .item .choice{ display:block; width:28rpx; height: 28rpx; background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/circle.png) no-repeat; background-size:contain; margin-top:5rpx;}
+.layer .on .choice{ background: url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/circle-on.png) no-repeat; background-size:contain;}
+.layer .item .option{ margin-left:24rpx; width:600rpx;}
+.item .option .name{ font-size:28rpx; display:block;}
+.name .strong{ color:#000000;}
+.strip{ display:block; margin-top:10rpx; line-height:40rpx;}
+.row{ display:flex; flex-direction:row; justify-content:space-between; align-items:center;}
+.module-title.row .subtitle{ font-size:22rpx; margin-top:0;}
+
+.wxParse-inline{ font-size:24rpx; line-height:40rpx; color:#555555;}

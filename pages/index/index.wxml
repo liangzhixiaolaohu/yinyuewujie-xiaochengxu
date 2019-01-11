@@ -1,0 +1,48 @@
+<view class="wrap">
+  <view class="color-block"></view>
+  <!-- banner -->
+  <view class="banner">
+    <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{banner}}" wx:key="idx">
+      <swiper-item>
+        <image src="{{item.image}}" class="slide-image" mode="widthFix"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  </view>
+  <!-- 滚动模块 -->
+  <view class="scroll">
+    <view class="title">
+      <span bindtap="bindViewTap">赛事</span>
+      <em style="display:none"><span>1</span>/8</em>
+    </view>
+    <view class="scroll-con">
+      <view class="scroll-list">
+        <view class="scroll-item" wx:for="{{match}}" wx:key="idx">
+          <view class="pic"><image src="{{item.image}}" id="{{item.match_id}}" bindtap="detail" mode="widthFix"></image><i class="mark mark{{item.status}}"></i></view>
+          <text class="name">{{item.title}}</text>
+          <text class="info">主办方：{{item.sponsor}}</text>
+          <text class="info">赛事时间：{{item.match_start_time}}-{{item.match_end_time}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 滚动模块 -->
+  <view class="scroll">
+    <view class="title">
+      <span open-type="getUserInfo" bindgetuserinfo="getUserInfo">活动</span>
+      <em style="display:none"><span>1</span>/8</em>
+    </view>
+    <view class="scroll-con">
+      <view class="scroll-list">
+        <view class="scroll-item" wx:for="{{activity}}" wx:key="idx">
+          <view class="pic"><image src="{{item.image}}" id="{{item.match_id}}" bindtap="detail" mode="widthFix"></image><i class="mark mark{{item.status}}"></i></view>
+          <text class="name">{{item.title}}</text>
+          <text class="info">主办方：{{item.sponsor}}</text>
+          <text class="info">赛事时间：{{item.match_start_time}}-{{item.match_end_time}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

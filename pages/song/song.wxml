@@ -1,0 +1,49 @@
+<!--pages/song/song.wxml-->
+<view class="bg">
+  <view class="wrap">  
+    <!-- 曲目 -->
+    <view class="block-white radius10 marT2 padT3 padB4">
+      <view class="module-title song-title">
+        <span class="title">复赛曲目 </span>
+        <span class="subtitle">添加两首为完整添加，最多添加两首 </span>
+      </view>
+      <view class="song-one" wx:for="{{prelim}}" wx:key="index">
+        <span class="text strong">曲目{{index+1}}</span>
+        <span class="text24">曲目名：{{item.song}}</span>
+        <span class="text24">作曲家：{{item.composer}}</span>
+        <view class="action">
+          <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/edit.png" data-id="{{item.id}}" data-song="{{item.song}}" data-composer="{{item.composer}}" bindtap='editSong'></image>
+          <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/delete.png" data-id="{{item.id}}" data-type='1' data-index="{{index}}" bindtap="delSong"></image>
+        </view>
+      </view>
+      <view class="empty" wx:if="{{prelim.length == 0}}">
+        <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/empty.png"></image>
+      </view>
+      <view class="jc-center">
+        <span class="button4 marT4" data-type='1' bindtap="toSongEdit">添加曲目</span>
+      </view>
+    </view>
+    <!-- 曲目 -->
+    <view class="block-white radius10 marT2 padT3 padB4">
+      <view class="module-title song-title">
+        <span class="title">决赛曲目</span>
+        <span class="subtitle">添加两首为完整添加，最多添加两首</span>
+      </view>
+      <view class="song-one" wx:for="{{final}}" wx:key="index">
+        <span class="text strong">曲目{{index+1}}</span>
+        <span class="text24">曲目名：{{item.song}}</span>
+        <span class="text24">作曲家：{{item.composer}}</span>
+        <view class="action">
+          <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/edit.png" data-id="{{item.id}}" data-song="{{item.song}}" data-composer="{{item.composer}}" bindtap='editSong'></image>
+          <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/delete.png" data-id="{{item.id}}" data-type='2' data-index="{{index}}" bindtap="delSong"></image>
+        </view>
+      </view>
+      <view class="empty" wx:if="{{final.length == 0}}">
+        <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/empty.png"></image>
+      </view>
+      <view class="jc-center">
+        <span class="button4 marT4" data-type='2' bindtap="toSongEdit">添加曲目</span>
+      </view>
+    </view>
+  </view>
+</view>

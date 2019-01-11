@@ -1,0 +1,7 @@
+<!--pages/more/more.wxml-->
+<import src="../../static/wxParse/wxParse.wxml"/>
+<!-- 这里data中article为bindName -->
+<view class="wrap more">
+  <web-view src="{{api_url}}/v1/match/introhtml?match_id={{match_id}}&type={{type}}"></web-view>
+  <!-- <template is="wxParse" data="{{wxParseData:article1.nodes}}" /> -->
+</view>

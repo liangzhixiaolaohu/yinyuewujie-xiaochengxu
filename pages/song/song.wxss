@@ -1,0 +1,9 @@
+/* pages/song/song.wxss */
+.song-title{ padding:0 0 15rpx 40rpx; border-bottom:2px solid #F5F5F5;}
+.song-one{ padding:22rpx 40rpx; font-size:0; border-bottom:2px solid #F5F5F5;}
+.song-one .text24{ padding-top:15rpx;}
+.action{ display:flex; justify-content: flex-end; padding-top:12rpx;}
+.action image{ width:28rpx; height: 28rpx; margin-left:60rpx;}
+.jc-center{ display:flex; justify-content:center;}
+.empty{ padding-top:70rpx; display:flex; justify-content:center;}
+.empty image{ width:336rpx; height: 220rpx;}

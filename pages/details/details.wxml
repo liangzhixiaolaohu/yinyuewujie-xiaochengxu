@@ -1,0 +1,165 @@
+<!--pages/details/details.wxml-->
+<import src="../../static/wxParse/wxParse.wxml" />
+<view class="bg">
+  <!-- 赛事 -->
+  <view class="w-block">
+    <view class="wrap">
+      <view class="activity">
+        <image src="{{details.image}}" mode="widthFix"></image>
+        <view class="act-intr">
+          <view class="act-head"><image src="{{details.logo_image}}" style="width:119rpx; height:117rpx"></image></view>
+          <view class="act-info">
+            <text class="name">{{details.title}}</text>
+            <text class="info">主办方：{{details.sponsor}}</text>
+            <text class="info">赛事时间：{{details.match_start_time}}-{{details.match_end_time}}</text>
+          </view>
+        </view>
+        <view class="cost">
+          <view class="cost-item">
+            <span class="price">¥{{details.entry_fee}}</span>
+            <span class="item-name">学员费用</span>
+          </view>
+          <view class="cost-item">
+            <span class="price">¥{{details.audit_fee}}</span>
+            <span class="item-name">陪同费用</span>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 入口 -->
+  <view class="w-block" wx:if="{{tp == 1}}">
+    <view class="entry">
+      <view class="entry-one" wx:if="{{isbmStatus == 1}}">
+        <navigator
+          url="../course/course?match_id={{id}}"
+          hover-class="none"
+        >
+        <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/icon-course.png"></image>
+        <text class="name">课程选择</text>
+        </navigator>
+      </view>
+      <view class="entry-one" wx:else>
+        <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/icon-course.png"></image>
+        <text class="name">课程选择</text>
+      </view>
+      <view class="entry-one" wx:if="{{tp !== 2 && entry_status == 0}}">
+        <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/icon-vote.png" bindtap='tovotinggroup'></image>
+        <text class="name" bindtap='tovotinggroup'>网络投票</text>
+      </view>
+      <!-- <view class="entry-one">
+        <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/icon-info.png"></image>
+        <span class="name">赛事资讯</span>
+      </view> -->
+      <view class="entry-one" wx:if="{{matchStatus == 3}}">
+        <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/icon-ranking.png" bindtap='toResult'></image>
+        <span class="name" bindtap='toResult'>名次公布</span>
+      </view>
+    </view>
+  </view>
+  <!-- 赛事介绍 -->
+  <view class="w-block">
+    <!-- 评委介绍 -->
+    <view class="wrap">
+      <view class="module-title">
+        <text class="title">评委介绍</text>
+        <text class="subtitle">专业 公平的评委</text>
+      </view>
+      <view class="scroll">
+        <view class="scroll-con">
+          <view class="scroll-list">
+            <block wx:if="{{details.jury.length>3}}">
+              <view class="list-line">
+                <view class="rater" wx:for="{{details.jury}}" wx:key="index" wx:if="{{index%2 == 0}}">
+                  <image src="{{item.avatar}}"></image>
+                  <text class="name">{{item.name}}</text>
+                  <text class="school">{{item.school}}</text>
+                </view>
+              </view>
+              <view class="list-line">
+                <view class="rater" wx:for="{{details.jury}}" wx:key="index" wx:if="{{index%2 == 1}}">
+                  <image src="{{item.avatar}}"></image>
+                  <text class="name">{{item.name}}</text>
+                  <text class="school">{{item.school}}</text>
+                </view>
+              </view>
+            </block>
+            <block wx:elif="{{details.jury.length<=3}}">
+              <view class="list-line">
+                <view class="rater" wx:for="{{details.jury}}" wx:key="index">
+                  <image src="{{item.avatar}}"></image>
+                  <text class="name">{{item.name}}</text>
+                  <text class="school">{{item.school}}</text>
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 赛事介绍 -->
+    <view class="pad-block">
+      <view class="wrap">
+        <view class="module-title row">
+          <text class="title">赛事介绍</text>
+          <text class="subtitle" data-type='intro' bindtap="more">查看详情>></text>
+        </view>
+        <view class="par">{{details.intro}}</view>
+      </view>
+    </view>
+    <!-- 赛事章程 -->
+    <view class="pad-block">
+      <view class="wrap">
+        <view class="module-title row">
+          <text class="title">赛事章程</text>
+          <text class="subtitle" data-type="rules" bindtap="more">查看详情>></text>
+        </view>
+        <view class="par">{{details.rules}}</view>
+      </view>
+    </view>
+    <!-- 报名方式 -->
+    <view class="pad-block">
+      <view class="wrap">
+        <view class="module-title row">
+          <text class="title">报名方式</text>
+          <text class="subtitle" data-type="mode" bindtap="more">查看详情>></text>
+        </view>
+        <view class="par">{{details.mode}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 报名 -->
+  <view wx:if="{{entry_status == 0 && isbmStatus == 0}}" class="button1" data-type="{{tp}}" bindtap="layerOpen">立即报名</view>
+  <navigator
+    wx:elif="{{entry_status == 0 && isbmStatus == 1}}"
+    class="button1"
+    url="../personal/personal"
+    hover-class="none"
+  >
+    完善资料
+  </navigator>
+</view>
+<!-- 弹层 -->
+<view class="layer-bg" wx:if="{{suShow}}">
+  <view class="layer">
+    <span class="close" bindtap="layerClose"></span>
+    <span class="title">{{details.title}}</span>
+    <view class="item borderR1 {{num == 1 || num == 3 ? 'on' : ''}}" data-type="{{n1}}" bindtap='tochoice'>
+      <span class="choice"></span>
+      <view class="option">
+        <span class="name"><span class="strong">学员/</span>提示：</span>
+        <span class="strip">1.此项为预定金。</span>
+        <span class="strip">2.一个赛事中学员和陪同只能购买一项。一个赛事中学员和陪同只能购买一项。一个赛事中学员和陪同只能购买一项。</span>
+      </view>
+    </view>
+    <view class="item borderR2 {{num == 2 || num == 4 ? 'on' : ''}}" data-type="{{n2}}" bindtap='tochoice'>
+      <span class="choice"></span>
+      <view class="option">
+        <span class="name"><span class="strong">学员/</span>提示：</span>
+        <span class="strip">1.此项为预定金。</span>
+        <span class="strip">2.一个赛事中学员和陪同只能购买一项。</span>
+      </view>
+    </view>
+    <text class="button2 marAuto marT6" bindtap="tojoin">我要报名</text>
+  </view>
+</view>

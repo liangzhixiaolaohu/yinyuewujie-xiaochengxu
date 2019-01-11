@@ -1,0 +1,71 @@
+<!--pages/payment/payment.wxml-->
+<view class="bg vh100">
+  <!-- 商品列表 -->
+  <view class="pay-list marT2">
+    <!-- 分组 -->
+    <view class="area">
+      <view class="package">
+        <view class="p-pic">
+          <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/group2.png" mode='widthFix'></image>
+          <span class="tips">剩余4个名额</span>
+        </view>
+        <view class="p-intr">
+          <view class="p-top">
+            <view class="pt-left">
+              <span class="text strong block">吉拉·戈德斯坦</span><span class="p-origin block">波士顿大学音乐学院 丨 钢琴教授</span>
+            </view>
+            <view class="pt-right">
+              <span class="text tint">×1</span>
+            </view>
+          </view>
+          <view class="p-bottom">
+            <span class="text strong">¥1000</span>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 分组 -->
+    <view class="area">
+      <view class="package">
+        <view class="p-pic">
+          <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/group2.png" mode='widthFix'></image>
+          <span class="tips">剩余4个名额</span>
+        </view>
+        <view class="p-intr">
+          <view class="p-top">
+            <view class="pt-left">
+              <span class="text strong block">吉拉·戈德斯坦</span><span class="p-origin block">波士顿大学音乐学院 丨 钢琴教授</span>
+            </view>
+            <view class="pt-right">
+              <span class="text tint">×1</span>
+            </view>
+          </view>
+          <view class="p-bottom">
+            <span class="text strong">¥1000</span>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 支付合计 -->
+  <view class="area">
+    <view class="total">
+      <span class="text">合计：</span>
+      <span class="text strong">¥2000.00</span>
+    </view>
+  </view>
+  <!-- 支付方式 -->
+  <view class="payment-method marT2">
+    <view class="method">
+      <view class="name"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/zhifubao.png" mode='widthFix' style="width:40rpx; height:.32rem; margin-right:20rpx;"></image><span class="text">支付宝支付</span></view>
+      <view class="choice"></view>
+    </view>
+    <view class="method">
+      <view class="name"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/weixin.png" mode='widthFix' style="width:40rpx; height:38rpx; margin-right:20rpx;"></image><span class="text">微信支付</span></view>
+      <view class="choice on"></view>
+    </view>
+    <view class="tips"><span>需在报名截止日前缴纳相关费用（以缴纳成功为准）</span></view>
+  </view>
+  <!-- 按钮 -->
+  <span class="button3 fixed">确认支付</span>
+</view>

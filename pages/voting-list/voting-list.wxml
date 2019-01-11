@@ -1,0 +1,123 @@
+<!--pages/voting-list/voting-list.wxml-->
+<view class="bg">
+  <!-- banner -->
+  <view class="banner">
+    <image src="{{banenr}}" mode="widthFix"></image>
+  </view>
+  <!-- 搜索 -->
+  <view class="search">
+    <form bindsubmit="bindconfirmfn" bindreset="formReset">
+    <image class='searchIcon' src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/search.jpg" mode="widthFix"></image>
+    <input type='text' name="keywords" confirm-type="search" bindconfirm="bindconfirmfn" placeholder="输入关键词查找" value='{{inputValue}}'/>
+    <text class="reset" bindtap='formReset'></text>
+    </form>
+  </view>
+  <!-- 排名 -->
+  <text class="ranking-title">投票排名</text>
+  <view class="ranking-list">
+    <view class="r-line" wx:for="{{list}}" wx:key="index" wx:if="{{item.rank == 1}}">
+      <view class="order">
+        <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/rank1.png" mode="widthFix" style="width:44rpx; height: 58rpx;"></image>
+      </view>
+      <view class="r-item">
+        <view class="person" data-name="{{item.nickname}}" data-avatar="{{item.avatar}}" data-vote="{{item.vote_num}}" data-rank="{{item.rank}}" data-song="{{songArr[index]}}" data-uid="{{item.uuid}}" bindtap='toContestant'>
+          <image src="{{item.avatar ? item.avatar : 'https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/head.png'}}" mode="aspectFill"></image>
+          <text class="name">{{item.nickname}}</text>
+        </view>
+        <view class="poll">
+          <text class="num">{{voteNumArr[index]}}票</text>
+          <text class="vote" data-num="{{item.vote_num}}" data-mid="{{match_id}}" data-gid="{{group_id}}" data-uid="{{item.uuid}}" data-name="{{item.nickname}}" data-avatar="{{item.avatar}}" data-rank="{{item.rank}}" data-index="{{index}}" bindtap='toVote'>投票</text>
+          <!-- <text class='vote1' wx:else="{{item.vote_status == 1}}">投票</text> -->
+        </view>
+      </view>
+    </view>
+    <view class="r-line" wx:for="{{list}}" wx:key="index" wx:if="{{item.rank == 2}}">
+      <view class="order">
+        <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/rank2.png" mode="widthFix" style="width:44rpx; height: 58rpx;"></image>
+      </view>
+      <view class="r-item">
+        <view class="person" data-name="{{item.nickname}}" data-avatar="{{item.avatar}}" data-vote="{{item.vote_num}}" data-rank="{{item.rank}}" data-song="{{songArr[index]}}" data-uid="{{item.uuid}}" bindtap='toContestant'>
+          <image src="{{item.avatar ? item.avatar : 'https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/head.png'}}" mode="aspectFill"></image>
+          <text class="name">{{item.nickname}}</text>
+        </view>
+        <view class="poll">
+          <text class="num">{{voteNumArr[index]}}票</text>
+          <text class="vote" data-num="{{item.vote_num}}" data-mid="{{match_id}}" data-gid="{{group_id}}" data-uid="{{item.uuid}}" data-name="{{item.nickname}}" data-avatar="{{item.avatar}}" data-rank="{{item.rank}}" data-index="{{index}}" bindtap='toVote'>投票</text>
+          <!-- <text class='vote1' wx:else="{{item.vote_status == 1}}">投票</text> -->
+        </view>
+      </view>
+    </view>
+    <view class="r-line" wx:for="{{list}}" wx:key="index" wx:if="{{item.rank == 3}}">
+      <view class="order">
+        <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/rank3.png" mode="widthFix" style="width:44rpx; height: 58rpx;"></image>
+      </view>
+      <view class="r-item">
+        <view class="person" data-name="{{item.nickname}}" data-avatar="{{item.avatar}}" data-vote="{{item.vote_num}}" data-rank="{{item.rank}}" data-song="{{songArr[index]}}" data-uid="{{item.uuid}}" data-uid="{{item.uuid}}" bindtap='toContestant'>
+          <image src="{{item.avatar ? item.avatar : 'https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/head.png'}}" mode="aspectFill"></image>
+          <text class="name">{{item.nickname}}</text>
+        </view>
+        <view class="poll">
+          <text class="num">{{voteNumArr[index]}}票</text>
+          <text class="vote" data-num="{{item.vote_num}}" data-mid="{{match_id}}" data-gid="{{group_id}}" data-uid="{{item.uuid}}" data-name="{{item.nickname}}" data-avatar="{{item.avatar}}" data-rank="{{item.rank}}" data-index="{{index}}" bindtap='toVote'>投票</text>
+          <!-- <text class='vote1' wx:else="{{item.vote_status == 1}}">投票</text> -->
+        </view>
+      </view>
+    </view>
+    <view class="r-line" wx:for="{{list}}" wx:key="index" wx:if="{{item.rank > 3}}">
+      <view class="order">
+        <text>{{item.rank}}</text>
+      </view>
+      <view class="r-item">
+        <view class="person" data-name="{{item.nickname}}" data-avatar="{{item.avatar}}" data-vote="{{item.vote_num}}" data-rank="{{item.rank}}" data-song="{{songArr[index]}}" data-uid="{{item.uuid}}" data-uid="{{item.uuid}}" bindtap='toContestant'>
+          <image src="{{item.avatar ? item.avatar : 'https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/head.png'}}" mode="aspectFill"></image>
+          <text class="name">{{item.nickname}}</text>
+        </view>
+        <view class="poll">
+          <text class="num">{{voteNumArr[index]}}票</text>
+          <text class="vote" data-num="{{item.vote_num}}" data-mid="{{match_id}}" data-gid="{{group_id}}" data-uid="{{item.uuid}}" data-name="{{item.nickname}}" data-avatar="{{item.avatar}}" data-rank="{{item.rank}}" data-index="{{index}}" bindtap='toVote'>投票</text>
+          <!-- <text class='vote1' wx:else="{{item.vote_status == 1}}">投票</text> -->
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 底线 -->
+  <view class="base-line">
+    <view class="line"></view>
+    <text class="base-text">我是有底线的</text>
+  </view>
+</view>
+<!-- 弹层 -->
+<div class="mask" wx:if="{{showPop}}">
+  <!-- <div class="pop">
+    <div class="title">
+      <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/notice-icon.png" style="width:.52rem; height:.52rem;"></image><span class="name">投票须知</span>
+    </div>
+    <div class="pop-content">
+      <span class="text block marT4">投票时间</span>
+      <span class="strip block">2018年1月1日-2018年2月1日</span>
+      <span class="text block marT4">投票规则</span>
+      <span class="strip block">每位用户每日享有3张投票权，且不限制组别，一天只能为同一参赛者投票一次。</span>
+      <span class="text block marT4">评选规则</span>
+      <span class="strip block">活动时间内，根据参赛者最终的票数，每个组别票数最多者获得该组网络人气奖。</span>
+      <span class="text20 block marT4">如出现恶意刷票等违规行为, 组委会有权取消选手的网络评选资格</span>
+    </div>
+    <div class="close">
+      <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/close2.png" style="width:64rpx; height:64rpx;"></image>
+    </div>
+  </div> -->
+  <div class="pop pop-vote">
+    <div class="pop-content pop-content-vote">
+      <image class="headpic" src="{{avatar}}" style="width:160rpx; height:160rpx;"></image>
+      <span class="name">{{nickname}}</span>
+      <span class="rank">暂列第{{rank}}名</span>
+      <div class="ballot">
+        <span class="num" wx:for="{{voteArr}}" wx:key="index">{{item}}</span>
+        <span>票</span>
+      </div>
+      <span class="toHelp" style="display:none">分享为TA助力</span>
+    </div>
+    <div class="close" bindtap="closePop">
+      <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/close2.png" style="width:64rpx; height:64rpx;"></image>
+    </div>
+  </div>
+</div>

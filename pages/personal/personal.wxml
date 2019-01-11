@@ -1,0 +1,109 @@
+<!--pages/personal/personal.wxml-->
+<view class="bg">
+  <!-- 模块 -->
+  <!-- <view class="block-white border-top">
+    <view class="p-tab">
+      <text class="tab-item on">基本信息</text>
+      <text class="tab-item">音乐履历</text>
+    </view>
+  </view> -->
+  <!-- 模块 -->
+  <view class="block-white padT6 padB6 border-top">
+    <view class="head">
+      <view class="pic">
+        <image class="head-pic" src="{{avatarUrl}}" mode="aspectFill"></image>
+        <image class="camera" src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/camera.png" mode="widthFix" bindtap="chooseImg"></image>
+      </view>
+      <text class="pic-revise">点击修改头像</text>
+      <text class="pic-tips">请上传五官清晰照</text>
+    </view>
+  </view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+  <!-- 模块 -->
+  <view class="block-white">
+    <view class="one-item">
+      <view class="item-name"><text class="mark">*</text><text class="name">昵称</text></view>
+      <view class="item-info"><input class="info" placeholder="请填写" placeholder-class="placeholder" bindinput='inputNickname' value='{{user.nickname}}' name="nickname"/></view>
+    </view>
+    <view class="one-item">
+      <view class="item-name"><text class="mark">*</text><text class="name">真实姓名</text></view>
+      <view class="item-info"><input class="info" placeholder="请填写" placeholder-class="placeholder" bindinput="inputRealname" value='{{user.realname}}' name="realname"/></view>
+    </view>
+    <view class="one-item">
+      <view class="item-name"><text class="mark">*</text><text class="name">身份证号</text></view>
+      <view class="item-info">
+      <input class="info" wx:if="{{user.idcode == ''}}" placeholder="请填写" placeholder-class="placeholder" bindinput="inputIdcode" value='{{user.idcode}}' name="idcode"/>
+      <text class="info" wx:else>{{user.idcode}}</text>
+      </view>
+    </view>
+    <view class="one-item">
+      <view class="item-name"><text class="mark">*</text><text class="name">性别</text></view>
+      <view class="item-info">
+        <view style="display:flex;">
+          <radio-group style="display:flex;" name="gender" bindchange="radioChange">
+            <label class="{{gender == 1 ? 'on' : ''}}" style="display:flex;" data-sex="1" bindtap="gender">
+              <radio style="transform:scale(0.65)" value="1" checked="true" />
+              男
+            </label>
+            <label class="{{gender == 2 ? 'on' : ''}}" style="display:flex;" data-sex="2" bindtap="gender">
+              <radio style="transform:scale(0.65)" value="2" />
+              女
+            </label>
+          </radio-group>
+          <!-- <view class="sex {{user.gender == 1 ? 'on' : ''}}" data-sex="1" bindtap="gender"><view class="icon"></view><text>男</text></view>
+          <view class="sex {{user.gender == 2 ? 'on' : ''}}" data-sex="2" bindtap="gender"><view class="icon"></view><text>女</text></view> -->
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 模块 -->
+  <view class="block-white">
+  <view class="one-item">
+      <view class="item-name"><text class="mark">*</text><text class="name">手机号码</text></view>
+      <view class="item-info" wx:if="{{user.mobile}}"><text class="info">{{user.mobile}}</text></view>
+      <view class="item-info" wx:else><input class="info" placeholder="未绑定" placeholder-class="placeholder" bindinput="inputMobile" value='{{user.mobile}}' name="mobile"/></view>
+    </view>
+    <view class="one-item">
+      <view class="item-name"><text class="mark">*</text><text class="name">邮箱</text></view>
+      <view class="item-info"><input class="info" placeholder="请填写" placeholder-class="placeholder" bindinput="inputEmail" value='{{user.email}}' name="email"/></view>
+    </view>
+    <view class="one-item">
+      <view class="item-name"><text class="mark">*</text><text class="name">现居地</text></view>
+      <view class="item-info">
+        <picker
+         class="info"
+          mode="region"
+          bindchange="bindRegionChange"
+          value="{{region}}"
+          custom-item="{{customItem}}"
+        >
+          <view class="picker" name="city">
+            {{region[0]}}，{{region[1]}}，{{region[2]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <!-- 模块 -->
+  <view class="block-white">
+    <view class="one-item">
+      <view class="item-name"><text class="mark">*</text><text class="name">就读学校</text></view>
+      <view class="item-info"><input class="info" placeholder="请填写" placeholder-class="placeholder" bindinput="inputSchool" value='{{user.school}}' name="school"/></view>
+    </view>
+    <view class="one-item">
+      <view class="item-name"><text class="mark">*</text><text class="name">指导老师</text></view>
+      <view class="item-info"><input class="info" placeholder="请填写" placeholder-class="placeholder" bindinput="inputTeacher" value='{{user.teacher}}' name="teacher"/></view>
+    </view>
+    <view class="one-item">
+      <view class="item-name"><text class="mark">*</text><text class="name">音乐主修</text></view>
+      <view class="item-info"><input class="info" placeholder="请填写" placeholder-class="placeholder" bindinput="inputMajor" value='{{user.major}}' name="major"/></view>
+    </view>
+    <view class="one-item">
+      <view class="item-name"><text class="mark">*</text><text class="name">参赛组别</text></view>
+      <view class="item-info"><text class="info" bindtap="actionSheet" name="group_id">{{group}}</text></view>
+    </view>
+  </view>
+  <!-- 按钮 -->
+  <button class="button3 radius0" form-type="submit">保存</button>
+  </form>
+</view>

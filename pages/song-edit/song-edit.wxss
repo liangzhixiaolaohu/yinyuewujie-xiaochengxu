@@ -1,0 +1,13 @@
+/* pages/song-edit/song-edit.wxss */
+.jc-center{ display:flex; justify-content:center;}
+.add-title{ padding:0 0 15rpx 20rpx;}
+.song-info{ border-top:2rpx solid #F5F5F5;  border-bottom:2rpx solid #F5F5F5;}
+.one-item{ margin-left:20rpx; border-bottom:2rpx solid #F5F5F5; font-size:28rpx; color: #555555; height: 100rpx; padding-right:22rpx; display:flex; flex-direction:row;}
+.one-item:nth-last-of-type(1){ border-bottom:none;}
+.item-name{ width:144rpx; margin-right:30rpx; display:flex; align-items:center;}
+.item-info{ flex:1; display:flex; align-items:center; justify-content:space-between;}
+.item-info input{ color:#B4B4B4; width:100%;}
+.item-name .mark{ color:#FF4F5F; margin-right:15rpx;}
+.border-box{ box-sizing:border-box;}
+.block-white:nth-last-of-type(1){ margin-bottom:0;}
+.height100{ min-height:calc(100vh - 20rpx); background: #ffffff;}

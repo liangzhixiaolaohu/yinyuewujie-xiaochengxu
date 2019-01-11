@@ -1,0 +1,111 @@
+<!--pages/shopping-cart/shopping-cart.wxml-->
+<view class="bg vh100">
+  <!-- 商品列表 -->
+  <view class="shopping-list marT2">
+    <!-- 分组 -->
+    <view class="area">
+      <view class="package">
+        <view class="choice-zone"><view class="choice"></view></view>
+        <view class="p-pic">
+          <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/group2.png" mode='widthFix'></image>
+          <span class="tips">剩余4个名额</span>
+        </view>
+        <view class="p-intr">
+          <view class="p-top">
+            <view class="pt-left">
+              <span class="text strong block">吉拉·戈德斯坦</span><span class="p-origin block">波士顿大学音乐学院 丨 钢琴教授</span>
+            </view>
+          </view>
+          <view class="p-bottom">
+            <span class="text strong">¥1000</span>
+            <view class="count">
+              <view class="symbol"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/minus.png" mode='widthFix' style="width:.16rem; height:.02rem;"></image></view>
+              <span class="num">1</span>
+              <view class="symbol"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/add.png" mode='widthFix' style="width:.16rem; height:.16rem;"></image></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 分组 -->
+    <view class="area">
+      <view class="package">
+        <view class="choice-zone"><view class="choice on"></view></view>
+        <view class="p-pic">
+          <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/group2.png" mode='widthFix'></image>
+          <span class="tips">剩余4个名额</span>
+        </view>
+        <view class="p-intr">
+          <view class="p-top">
+            <view class="pt-left">
+              <span class="text strong block">吉拉·戈德斯坦</span><span class="p-origin block">波士顿大学音乐学院 丨 钢琴教授</span>
+            </view>
+          </view>
+          <view class="p-bottom">
+            <span class="text strong">¥1000</span>
+            <view class="count">
+              <view class="symbol"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/minus.png" mode='widthFix' style="width:.16rem; height:.02rem;"></image></view>
+              <span class="num">1</span>
+              <view class="symbol"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/add.png" mode='widthFix' style="width:.16rem; height:.16rem;"></image></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 分组 -->
+    <view class="area">
+      <view class="package">
+        <view class="choice-zone"><view class="choice on"></view></view>
+        <view class="p-pic">
+          <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/group2.png" mode='widthFix'></image>
+          <span class="tips">剩余4个名额</span>
+        </view>
+        <view class="p-intr">
+          <view class="p-top">
+            <view class="pt-left">
+              <span class="text strong block">吉拉·戈德斯坦</span><span class="p-origin block">波士顿大学音乐学院 丨 钢琴教授</span>
+            </view>
+          </view>
+          <view class="p-bottom">
+            <span class="text strong">¥1000</span>
+            <view class="count">
+              <view class="symbol"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/minus.png" mode='widthFix' style="width:.16rem; height:.02rem;"></image></view>
+              <span class="num">1</span>
+              <view class="symbol"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/add.png" mode='widthFix' style="width:.16rem; height:.16rem;"></image></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 分组 -->
+    <view class="area">
+      <view class="package">
+        <view class="choice-zone"><view class="choice on"></view></view>
+        <view class="p-pic">
+          <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/group2.png" mode='widthFix'></image>
+          <span class="tips">剩余4个名额</span>
+        </view>
+        <view class="p-intr">
+          <view class="p-top">
+            <view class="pt-left">
+              <span class="text strong block">吉拉·戈德斯坦</span><span class="p-origin block">波士顿大学音乐学院 丨 钢琴教授</span>
+            </view>
+          </view>
+          <view class="p-bottom">
+            <span class="text strong">¥1000</span>
+            <view class="count">
+              <view class="symbol"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/minus.png" mode='widthFix' style="width:.16rem; height:.02rem;"></image></view>
+              <span class="num">1</span>
+              <view class="symbol"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/add.png" mode='widthFix' style="width:.16rem; height:.16rem;"></image></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 结算条 -->
+  <view class="settlement fixed">
+    <view class="check-all"><view class="choice on"></view><span class="text24">全选</span></view>
+    <view class="settle"><span class="text">合计：¥2000.00</span><span class="sc-button">结算</span></view>
+  </view>
+</view>

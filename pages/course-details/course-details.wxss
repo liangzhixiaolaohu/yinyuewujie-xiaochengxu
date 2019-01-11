@@ -1,0 +1,20 @@
+/* pages/course-details/course-details.wxss */
+.vh100{ min-height:100vh;}
+.head{ position: relative;}
+.avatar{ vertical-align: top; border-radius: 0;}
+.info-bg{ position:absolute; left:0; bottom:0; width:100%; height:400rpx; background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/cbg.png) no-repeat; padding-bottom:30rpx; box-sizing: border-box; display: flex; align-items: flex-end;}
+.info{ font-size:24rpx; color: #F3BB8D; display: flex; flex-direction: column; justify-content:space-between; border-left: 6rpx solid #F3BB8D; margin-left:20rpx; padding-left:20rpx;}
+.info .name{ font-size: 52rpx;}
+.info .title{ font-size: 28rpx; margin:10rpx 0 20rpx; color: #F3BB8D;}
+.tips{ height: 40rpx; line-height: 40rpx; font-size:20rpx; color:#F3BB8D; background: #000000; padding-left:20rpx;}
+.title{ font-size: 36rpx; color: #555555; font-weight: 700;}
+.content{ font-size: 28rpx; color:#555555; line-height: 50rpx;}
+.content .wxParse-div{ font-size: 28rpx !important; color:#555555 !important; line-height:50rpx !important;}
+.count{ display:flex; font-size:20rpx; width:198rpx; height:48rpx; border:1px solid #dddddd;}
+.count .symbol{ flex:1; display:flex; justify-content:center; align-items:center;}
+.count .num{ display:block; width:50rpx; text-align:center; line-height:48rpx; background: #f5f5f5; color:#555555; border-left:1px solid #dddddd; border-right:1px solid #dddddd;}
+.counter{ display: flex; justify-content: center;}
+.bottom-bar{ height: 88rpx; line-height: 88rpx; font-size:28rpx; background: #333333; color:#F3BB8D; font-weight: 700; text-align: center; display: flex;}
+.bottom-bar .s-car-icon{ width:130rpx; display: flex; justify-content: center; align-items: center; background: #ffffff; border-top:2rpx solid #E0E0E0;}
+.bottom-bar .add-to-cart{ flex: 1; background: #F3BB8D; color:#333333; font-weight: 700;}
+.bottom-bar .to-buy{ flex:1; font-weight: 700;}

@@ -1,0 +1,74 @@
+<!--pages/order/order.wxml-->
+<view class="bg vh100">
+  <!-- 倒计时 -->
+  <view class="area border-top">
+    <view class="count-down">
+      <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/clocks.png" mode='widthFix' style="width:160rpx; height:160rpx;"></image>
+      <span class="time">29:59</span>
+      <span class="tips">分钟订单自动关闭</span>
+    </view>
+  </view>
+  <!-- 商品列表 -->
+  <view class="pay-list marT2">
+    <!-- 分组 -->
+    <view class="area">
+      <view class="package">
+        <view class="p-pic">
+          <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/group2.png" mode='widthFix'></image>
+          <span class="tips">剩余4个名额</span>
+        </view>
+        <view class="p-intr">
+          <view class="p-top">
+            <view class="pt-left">
+              <span class="text strong block">吉拉·戈德斯坦</span><span class="p-origin block">波士顿大学音乐学院 丨 钢琴教授</span>
+            </view>
+            <view class="pt-right">
+              <span class="text tint">×1</span>
+            </view>
+          </view>
+          <view class="p-bottom">
+            <span class="text strong">¥1000</span>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 分组 -->
+    <view class="area">
+      <view class="package">
+        <view class="p-pic">
+          <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/group2.png" mode='widthFix'></image>
+          <span class="tips">剩余4个名额</span>
+        </view>
+        <view class="p-intr">
+          <view class="p-top">
+            <view class="pt-left">
+              <span class="text strong block">吉拉·戈德斯坦</span><span class="p-origin block">波士顿大学音乐学院 丨 钢琴教授</span>
+            </view>
+            <view class="pt-right">
+              <span class="text tint">×1</span>
+            </view>
+          </view>
+          <view class="p-bottom">
+            <span class="text strong">¥1000</span>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 支付合计 -->
+  <view class="area">
+    <view class="total">
+      <span class="text">合计：</span>
+      <span class="text strong">¥2000.00</span>
+    </view>
+  </view>
+  <!-- 支付方式 -->
+  <view class="order-info marT2">
+    <view class="order-info-line"><span class="text">订单编号</span><view class="number"><span class="text">20156720181111</span><span class="copy">复制</span></view></view>
+    <view class="order-info-line"><span class="text">创建时间</span><view class="number"><span class="text">2018-11-11 18:30:20</span></view></view>
+  </view>
+  <!-- 按钮 -->
+  <view class="submit-btn fixed">
+    <span class="cancel-btn">取消订单</span><span class="confirm-btn">立即支付</span>
+  </view>
+</view>

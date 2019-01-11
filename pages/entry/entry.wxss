@@ -1,0 +1,31 @@
+/* pages/entry/entry.wxss */
+.master-item{ padding:44rpx; background:#ffffff; margin-top:20rpx; border-radius:10rpx; display:flex; flex-direction:row; justify-content:space-between; align-items:flex-end;}
+.marker{ font-size:20rpx; color:#ffffff; position:absolute; top:0; right:0; height: 56rpx; line-height: 56rpx; background:#3E87FF; letter-spacing:6rpx;}
+.step{ display:flex; flex-direction: column; width:500rpx;}
+.fp-name{ font-size:28rpx; padding-bottom:10rpx; font-weight:700;}
+.a-bout{ font-size:24rpx; color: #999999; padding-top:10rpx; line-height: 35rpx;}
+.state{ font-size:24rpx; color:#FFAA2D;}
+.s-icon{ display:inline-block; width:28rpx; height: 28rpx; margin-right:10rpx; vertical-align:top; margin-top:3rpx;}
+.marker1{ background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/bmxy.png) no-repeat; background-size:contain; width:170rpx; }
+.marker2{ background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/bmpt.png) no-repeat; background-size:contain; width:170rpx;}
+.marker3{ background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/bmxy.png) no-repeat; background-size:contain; width:170rpx; }
+.marker4{ background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/bmpt.png) no-repeat; background-size:contain; width:170rpx;}
+.fp-name1{ color:#FF4F5F;}
+.fp-name2{ color:#3E87FF;}
+.s-icon1{ background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/success.png) no-repeat; background-size:contain;}
+.s-icon0{ background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/fail.png) no-repeat; background-size:contain;}
+.s-text1{ color:#8AD833;}
+.s-text0{ color:#FFAA2D;}
+
+.fp-item{ padding:35rpx 44rpx; background: #ffffff; margin-top:20rpx; border-radius:10rpx; font-size:28rpx; display:flex; justify-content:space-between; align-items:center; color:#E0E0E0;}
+.item-name{ display:flex; justify-content:flex-start; align-items:center;}
+.item-name .i-icon{ display:inline-block; width:52rpx; height: 50rpx; vertical-align:top; margin-right:40rpx;}
+.item-name .i-name{ color:#333333; font-weight:700; margin-right:22rpx;}
+.cost{ font-size:24rpx; color:#F9D090;}
+.fp-item .text{color:#E0E0E0;}
+.i-more{ display:flex; justify-content:flex-end; align-items:center;}
+.arrow{ display: inline-block; width:14rpx; height: 28rpx; margin-left:20rpx; background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/arrow-fp.png) no-repeat center; background-size:contain;}
+.i-icon1{ background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/icon-basic.png) no-repeat; background-size:contain;}
+.i-icon2{ background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/icon-song.png) no-repeat; background-size:contain;}
+.i-icon3{ background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/icon-video.png) no-repeat; background-size:contain;}
+.i-icon4{ background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/icon-cost.png) no-repeat; background-size:contain;}

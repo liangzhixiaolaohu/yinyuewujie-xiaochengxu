@@ -1,0 +1,39 @@
+/* pages/voting-list/voting-list.wxss */
+.jc-center{ display:flex; justify-content:center;}
+.banner image{ width:750rpx; border-radius:0;}
+.search{ width:710rpx; height:56rpx; border-radius:28rpx; background:#ffffff; margin:20rpx auto 40rpx; box-sizing:border-box; padding:0 20rpx 0 15rpx; overflow: hidden;}
+.search form{ width: 100%; height: 56rpx; overflow: hidden;}
+.searchIcon{width:26rpx; height:26rpx; float: left; margin-top:15rpx;}
+.search input{ width:600rpx; height:56rpx; line-height:56rpx; margin-left:12rpx; font-size:24rpx; color:#B4B4B4; box-sizing:border-box; float: left;}
+.search .reset{ width:32rpx; height:32rpx; background: url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/close3.png) no-repeat; background-size: contain; float: right; margin-top:13rpx; overflow: hidden; border: none; position: static; padding: 0;}
+
+.ranking-title{ height:50rpx; line-height: 50rpx; font-size:36rpx; color:#000000; padding:0 0 20rpx 20rpx; display:block; font-weight:bold;}
+.ranking-list{ background:#ffffff;}
+.r-line{ height:158rpx; display:flex;}
+.r-line .order{ width:100rpx; display:flex; justify-content:center; align-items:center; font-size:36rpx; color: #555555; font-weight:bold;}
+.r-item{ flex:1; border-bottom:2px solid #F5F5F5; display:flex; justify-content:space-between; align-items:center; font-size:0; padding-right:20rpx;}
+.r-line:nth-last-of-type(1) .r-item{ border-bottom:0;}
+.person{ display:flex; align-items:center;}
+.person image{ overflow: hidden; width:80rpx; height:80rpx; border-radius: 40rpx; }
+.person .name{ font-size:28rpx; width:200rpx; color:#555555; margin-left:20rpx; overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.poll .num{ font-size:36rpx; color:#FF6D43; font-weight: 700;}
+.vote{ display: inline-block; width:110rpx; height: 44rpx; line-height: 40rpx; text-align:center; border:2px solid #FF6D43; box-sizing:border-box; border-radius:22rpx; font-size:20rpx; color:#FF6D43; margin-left:60rpx;}
+.vote1{ display: inline-block; width:110rpx; height: 44rpx; line-height: 40rpx; text-align:center; border:2px solid #F5F5F5; box-sizing:border-box; border-radius:22rpx; font-size:20rpx; color:#B4B4B4; margin-left:60rpx;}
+.closed{ border:2px solid #B4B4B4; color:#B4B4B4;}
+
+.mask{ position:fixed; left:0; top:0; right:0; bottom:0; background: rgba(0,0,0,0.4); z-index: 10;}
+.pop{ width:570rpx; overflow: hidden; position:absolute; left:50%; top:50%; transform: translate(-50%, -50%);}
+.pop-content{ background:#ffffff; font-size:0; overflow: hidden; padding:0 30rpx 40rpx; border-radius:0 0 5px 5px;}
+.pop .title{ width:100%; font-size:36rpx; height:160rpx; background:#303030; display:flex; justify-content:center; align-items:center; color:#F4BC8E; border-radius:5px 5px 0 0;}
+.title .name{ margin-left:20rpx;}
+.strip{ font-size:28rpx; color:#999999; padding-top:5rpx;}
+.text20{ font-size:20rpx; color:#B4B4B4;}
+.pop .close{ display:flex; justify-content:center; margin-top:60rpx;}
+
+.pop-content-vote{ height:780rpx; background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/vote-suc.png) no-repeat; background-size: contain; display:flex; flex-direction:column; align-items:center;}
+.pop-content-vote .headpic{ margin-top:172rpx; border-radius: 50%;}
+.pop-content-vote .name{ font-size:36rpx; color:#F3BA8D; font-weight:700; height: 50rpx; line-height: 50rpx; display: block; margin:20rpx 0 10rpx;}
+.pop-content-vote .rank{ font-size:28rpx; color:#F3BA8D;}
+.pop-content-vote .ballot{ height: 60rpx; display:flex; justify-content: center; margin-top:30rpx;}
+.pop-content-vote .ballot span{ display: block; width:55rpx; height:60rpx; text-align: center; line-height: 60rpx; font-size: 28rpx; color: #000000; background: #ffffff; border-radius: 5rpx; margin:0 2rpx;}
+.toHelp{ width:300rpx; height: 88rpx; line-height: 88rpx; font-size:28rpx; color:#ffffff; text-align: center;  background: linear-gradient(to right, #edc297 , #ce9362); margin-top:80rpx; border-radius: 44rpx/50%;}

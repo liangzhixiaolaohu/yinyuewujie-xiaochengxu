@@ -1,0 +1,4 @@
+/* pages/match-result/match-result.wxss */
+.height100{ min-height:calc(100vh - 160rpx) ;}
+.border-top{ border-top:2rpx solid #F5F5F5;}
+.block-white:nth-last-of-type(1){ margin-bottom:0;}

@@ -1,0 +1,19 @@
+/* pages/video-edit/video-edit.wxss */
+.jc-center{ display:flex; justify-content:center;}
+.song-title{ padding:0 0 15rpx 20rpx; border-bottom:2px solid #F5F5F5;}
+.song-one{ padding:22rpx 40rpx; font-size:0; border-bottom:2px solid #F5F5F5;}
+.song-one .text24{ padding-top:15rpx;}
+.video{ position:relative; width:710rpx; height:448rpx; overflow:hidden;}
+.video video{ position:absolute; left:0; top:0; width:710rpx; height:448rpx; overflow: hidden; z-index: 0; border-radius:5px;}
+.video .revise{ position:absolute; left:0; bottom:0; width:710rpx; height: 80rpx; line-height: 80rpx; font-size:28rpx; color:#F3BB8D; text-align:center; background:#333333; border-radius:0 0 5px 5px; z-index: 100;}
+.play-btn{ position:absolute; left:50%; top:50%; width:88rpx; height:88rpx; margin:-44rpx 0 0 -44rpx; z-index: 5;}
+.song-info{ border-top:2px solid #F5F5F5;  border-bottom:2px solid #F5F5F5;}
+.one-item{ margin-left:20rpx; border-bottom:2px solid #F5F5F5; font-size:28rpx; color: #555555; height: 100rpx; padding-right:22rpx; display:flex; flex-direction:row;}
+.one-item:nth-last-of-type(1){ border-bottom:none;}
+.item-name{ width:144rpx; margin-right:30rpx; display:flex; align-items:center;}
+.item-info{ flex:1; display:flex; align-items:center; justify-content:space-between;}
+.item-info input{ color:#B4B4B4; width:100%;}
+.item-name .mark{ color:#FF4F5F; margin-right:15rpx;}
+.border-box{ box-sizing:border-box;}
+.block-white:nth-last-of-type(1){ margin-bottom:0;}
+.height100{ min-height:calc(100vh - 20rpx); background: #ffffff;}

@@ -1,0 +1,4 @@
+/* pages/login/login.wxss */
+.height100{ height: 100vh; border-top:2rpx solid #F5F5F5; box-sizing: border-box; display:flex; flex-direction:column; align-items:center;}
+.tips{ font-size:28rpx; color: #999999; display: block; text-align: center; margin:40rpx 0 120rpx;}
+

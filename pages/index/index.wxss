@@ -1,0 +1,11 @@
+/* pages/index/index.wxss */
+.banner{ position:relative; margin-bottom:50rpx;}
+.banner image{ width:710rpx; height:322rpx;}
+swiper{ height:322rpx;}
+.scroll-list .pic{ width:600rpx; height: 272rpx; overflow:hidden; position:relative;}
+.scroll-list .pic .mark{ display:inline-block; width:92rpx; height: 36rpx; line-height: 36rpx; text-align:center; position:absolute; left:0; bottom:0; font-size:24rpx; color:#ffffff; font-style:normal;}
+.scroll-list .pic .mark1{ background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/mark1.png) no-repeat; background-size:contain;}
+.scroll-list .pic .mark2{ background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/mark2.png) no-repeat; background-size:contain;}
+.scroll-list .pic .mark3{ background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/mark3.png) no-repeat; background-size:contain;}
+.scroll-list .name{ display:block; font-size:26rpx; line-height: 40rpx; font-weight: 700; padding:20rpx 0 10rpx; width:600rpx; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.scroll-list .info{ display:block; font-size:20rpx; color:#999999; line-height: 32rpx; padding:4rpx 0;}

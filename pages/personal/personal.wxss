@@ -1,0 +1,25 @@
+/* pages/personal/personal.wxss */
+.head{ display:flex; flex-direction:column; align-items:center;}
+.head .pic{ width:160rpx; height: 160rpx; overflow:hidden; position: relative;}
+.head-pic{ width:160rpx; height: 160rpx; border-radius:50%; overflow:hidden;}
+.camera{ width:44rpx; height: 44rpx; position:absolute; right:0; top:0; display: none;}
+.pic-revise{ font-size:28rpx; color: #555555; display:block; line-height: 50rpx; padding-top:15rpx; display: none;}
+.pic-tips{ font-size:20rpx; color: #B4B4B4; display: none;}
+
+.one-item{ margin-left:20rpx; border-bottom:2px solid #F5F5F5; font-size:28rpx; color: #555555; height: 100rpx; padding-right:22rpx; display:flex; flex-direction:row;}
+.one-item:nth-last-of-type(1){ border-bottom:none;}
+.item-name{ width:144rpx; margin-right:72rpx; display:flex; align-items:center;}
+.item-info{ flex:1; display:flex; align-items:center; justify-content:space-between;}
+.item-info input{ width:100%;}
+.item-name .mark{ color:#FF4F5F; margin-right:15rpx;}
+.sex{ margin-right:136rpx; display:flex; align-items:center;}
+.sex .icon{ width:30rpx; height: 30rpx; background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/circle.png) no-repeat; background-size:contain; margin-right:16rpx;}
+.on .icon{ background: url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/selected.png) no-repeat; background-size:contain;}
+.tint{ color: #B4B4B4;}
+.border-top{ border-top:2px solid #F5F5F5;}
+.placeholder{ color:#B4B4B4;}
+.radius0{ border-radius: 0;}
+radio-group{}
+radio-group label{ background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/circle.png) no-repeat left center; background-size:30rpx 30rpx; margin-right:136rpx; display: flex; align-items: center;}
+radio-group .on{background: url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/selected.png) no-repeat left center; background-size:30rpx 30rpx;}
+radio{ opacity: 0;}

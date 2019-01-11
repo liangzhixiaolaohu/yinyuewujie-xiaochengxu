@@ -1,0 +1,108 @@
+<!--pages/ipa/ipa.wxml-->
+<view class="bg">
+  <!-- IPA -->
+  <view class="block-white">
+    <view class="wrap font-size-0">
+      <view class="color-block"></view>
+      <!-- banner -->
+      <view class="banner marB6"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/banner-ipa.png" mode="widthFix"></image></view>
+      <view class="module-title">
+        <span class="title">IPA范读工具强势来袭</span>
+      </view>
+      <span class="text marT25">音乐无界历时多年的研发和准备，面向声乐专业教师和学生及声乐爱好者的西方声乐作品范读学习工具 ——【IPA国际音标范读】终于面世了！</span>
+      <view class="scroll marT4">
+        <view class="scroll-con">
+          <view class="scroll-list">
+            <view class="ipa-item"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/ipa1.png" style="width:320rpx; height:392rpx;"></image></view>
+            <view class="ipa-item"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/ipa2.png" style="width:320rpx; height:392rpx;"></image></view>
+            <view class="ipa-item"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/ipa3.png" style="width:320rpx; height:392rpx;"></image></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 模块 -->
+  <view class="block-white padT4 padB4">
+    <view class="wrap">
+      <view class="module-title">
+        <span class="title">To音乐无界的用户</span>
+      </view>
+      <view class="to-user">
+        <view class="quote1"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/quote1.png" style="width:30rpx; height:26rpx;"></image></view>
+        <span class="text">Hello，我是汉姆迪·克菲尔，我推荐您使用音乐无界“IPA国际音标范读”，是一款教你纯正歌词发音的专业学习工具。 </span>
+        <view class="quote2"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/quote2.png" style="width:30rpx; height:26rpx;" mode="widthFix"></image></view>
+        <image class="head" src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/hmd.png" style="width:120rpx; height:120rpx;"></image>
+      </view>
+      <span class="text color999">拥有德、意、英、法、俄、西班牙等多国语言，你可根据自己目前所学歌曲的语言需求进行选择，方便快捷;除此之外，还可根据自己需要的曲集、喜欢的作曲家进行选择，其中每一首歌曲都配备了高质量的标准示范音频，独创的有声式立体自学模式，更方便你的日常自学和练习！</span>
+    </view>
+  </view>
+  <!-- 模块 -->
+  <view class="block-white padT4">
+    <view class="wrap">
+      <view class="module-title between">
+        <span class="title">IPA产品特点</span>
+      </view>
+      <view class="points">
+        <view class="point">
+          <span class="name">精准分类</span>
+          <span class="text">按曲集，作曲家，语言，声部体裁细致分类，迅速找到您需要的歌曲。</span>
+        </view>
+        <view class="point">
+          <span class="name">大师范读</span>
+          <span class="text">汉姆迪·克菲尔多年来在大都会歌剧院担任法、意、德语语音专家。活跃于各国的歌剧舞台并受邀讲学，以主编身份编辑歌剧语音大师尼克·卡斯特尔的亨德尔歌剧著作。</span>
+        </view>
+        <view class="point">
+          <span class="name">使用便捷</span>
+          <span class="text">可针对一首歌曲中特定的歌词进行一对一的范读，只要您有需求，可随时随地开始学习之旅，对于规范歌词的语音，有很大的帮助。</span>
+        </view>
+      </view>
+      <view class="feature">
+        <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/feature.png" style="width:638rpx; height:680rpx;"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 模块 -->
+  <view class="block-white padT4">
+    <view class="wrap">
+      <view class="module-title">
+        <span class="title">如何使用IPA</span>
+      </view>
+      <view class="scroll marT4">
+        <view class="scroll-con">
+          <view class="scroll-list font-size-0">
+            <view class="vip-item"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/vip1.png" style="width:400rpx; height:220rpx;"></image><span class="text block">购买音乐无界会员</span><span class="text block">会员期间内无限制使用IPA</span></view>
+            <view class="vip-item"><image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/vip2.png" style="width:400rpx; height:220rpx;"></image><span class="text block">按首购买IPA</span><span class="text block">更准确，更方便</span></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 模块 -->
+  <view class="block-white padT4 padB6">
+    <view class="wrap">
+      <span class="text block color999 text-center">音乐无界，助力中国声乐！ </span>
+      <span class="text block color999 text-center">中国不光是声乐大国，更应该是声乐强国！</span>
+      <span class="text block color999 text-center">愿这一利器能够帮助中国声乐人才实现歌唱的质的飞跃！</span>
+      <view class="justify-con-center marT6">
+        <span class="button2" bindtap="toLoad">立即体验音乐无界IPA</span>
+      </view>
+    </view>
+  </view>
+  <!-- 弹层 -->
+  <view class="mask" wx:if="{{codeShow}}">
+    <view class="pop" catchtap>
+      <view class="title">
+        <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/code-icon.png" style="width:42rpx; height:42rpx;" mode='widthFix'></image><span class="name">扫码下载APP</span>
+      </view>
+      <view class="pop-content">
+        <view class='qr-code'>
+          <image src='https://api2.dev.yinyuewujie.com/app-load.png' mode='widthFix' style='width:282rpx; height:276rpx;'></image>
+        </view>
+        <text class='pop-btn' bindtap='savePictures'>保存为图片</text>
+      </view>
+      <view class="close" catchtap="closeCode">
+        <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/close2.png" style="width:64rpx; height:64rpx;"></image>
+      </view>
+    </view>
+  </view>
+</view>

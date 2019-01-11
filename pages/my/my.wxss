@@ -1,0 +1,39 @@
+/* pages/my/my.wxss */
+.head{ display:flex; flex-direction:column; align-items:center;}
+.head .pic{ width:160rpx; height: 160rpx; position: relative;}
+.head-pic{ width:160rpx; height: 160rpx; border-radius:50%;}
+.camera{ width:44rpx; height: 44rpx; position:absolute; right:0; top:0;}
+.pic-revise{ font-size:28rpx; color: #555555; display:block; line-height: 50rpx; padding-top:15rpx;}
+.pic-tips{ font-size:20rpx; color: #B4B4B4;}
+
+.one-item{ margin-left:20rpx; border-bottom:2px solid #F5F5F5; font-size:28rpx; color: #555555; height: 100rpx; padding-right:22rpx; display:flex; flex-direction:row;}
+.one-item:nth-last-of-type(1){ border-bottom:none;}
+.item-name{ width:144rpx; margin-right:72rpx; display:flex; align-items:center;}
+.item-info{ flex:1; display:flex; align-items:center; justify-content:space-between;}
+.item-name .mark{ color:#FF4F5F; margin-right:15rpx;}
+.sex{ margin-right:136rpx; display:flex; align-items:center;}
+.sex .icon{ width:30rpx; height: 30rpx; background:url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/circle.png) no-repeat; background-size:contain; margin-right:16rpx;}
+.sex .on{ background: url(https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/selected.png) no-repeat; background-size:contain;}
+.tint{ color: #B4B4B4;}
+.binding{ color:#B4B4B4; width:144rpx; height: 44rpx; box-sizing:border-box; border:2px solid #d8d8d8; border-radius: 22rpx; text-align:center; line-height: 38rpx; font-size:24rpx;}
+.item-info .arrow{ width:12rpx; height: 24rpx;}
+.login-tips{font-size:28rpx; color:#333333; margin-top:200rpx; text-align: center; padding:0 200rpx;}
+.tologin-btn{ color:#76c2e6; margin-right:10rpx;}
+
+.mask{ position:absolute; left:0; top:0; right:0; bottom:0; background:rgba(0,0,0,0.4); z-index:10;}
+.modal-content{ width:570rpx; position:absolute; left: 50%; top:50%; transform: translate(-50%, -50%); background:#ffffff; border-radius:10px; padding:20rpx 0;}
+.modal-content input{ width:80%; margin:30rpx 10%; height: 50rpx; font-size:28rpx; color:#B4B4B4; line-height: 50rpx;}
+.modal-content .btn{ display:block; height:60rpx; line-height: 60rpx; text-align:center; font-size:36rpx; color:#555555; padding-top:20rpx; border-top:.5rpx solid #B4B4B4;}
+
+.mask{ position:absolute; left:0; top:0; right:0; bottom:0; background: rgba(0,0,0,0.4);}
+.pop{ width:570rpx; overflow: hidden; position:absolute; left:50%; top:50%; transform: translate(-50%, -50%);}
+.pop-content{ background:#ffffff; font-size:0; overflow: hidden; padding:0 30rpx 40rpx; border-radius:0 0 5px 5px;}
+.pop .title{ width:100%; font-size:36rpx; height:160rpx; background:#303030; display:flex; justify-content:center; align-items:center; color:#F4BC8E; border-radius:5px 5px 0 0;}
+.title .name{ margin-left:20rpx;}
+.strip{ font-size:28rpx; color:#999999; padding-top:5rpx;}
+.qr-code{ text-align: center; padding:60rpx 0 50rpx;}
+.wechat-number{ display:flex; justify-content:center; align-items:center; font-size:24rpx;}
+.wechat-number .copy-btn{ display: block; width:100rpx; height:44rpx; line-height: 44rpx; border-sizing:border-box; border:2px solid #B4B4B4; text-align: center; border-radius: 22rpx/50%; margin-left:20rpx; color:#B4B4B4;}
+.pop-btn{ font-size:28rpx; color:#F3BB8D; display: block; width:240rpx; height: 64rpx; line-height:64rpx; margin:40rpx auto; background:#333333; text-align:center; border-radius:32rpx/50%;}
+.text20{ font-size:20rpx; color:#B4B4B4;}
+.pop .close{ display:flex; justify-content:center; margin-top:60rpx;}

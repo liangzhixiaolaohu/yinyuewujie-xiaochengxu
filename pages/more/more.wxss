@@ -1,0 +1,4 @@
+/* pages/more/more.wxss */
+.more{ padding:30rpx 0; border-top:2rpx solid #F5F5F5;}
+.wxParse-p{ font-size:28rpx; line-height: 50rpx;}
+.wxParse-inline{ font-size:28rpx !important; line-height: 50rpx  !important;}

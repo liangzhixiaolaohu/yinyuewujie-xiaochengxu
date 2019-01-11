@@ -1,0 +1,34 @@
+<!--pages/video/video.wxml-->
+<view class="bg">
+  <view class="height100">
+    <view class="block-white marT2 padT4 border-box">
+      <view class="module-title song-title">
+        <span class="title">网络初赛视频</span>
+        <span class="subtitle">添加两个视频为完整添加，最多添加两个</span>
+      </view>
+      <block wx:for="{{videoList}}" wx:key="index">
+      <view class="video-title font-size-0">
+        <span class="text">网络初赛视频{{index+1}}</span>
+      </view>
+      <view class="video marL2 marR2">
+        <video id="myvedio" src="{{item.video_url}}" style="width:710rpx; height:448rpx;" controls></video>
+        <!-- <image class="play" src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/play.png" mode='widthFix'></image> -->
+      </view>
+      <view class="video-intr">
+        <span class="text24">曲目名：{{item.song}}</span>
+        <span class="text24">作曲家：{{item.composer}}</span>
+        <view class="action">
+          <image class='edit' src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/edit.png" mode='widthFix' data-id="{{item.id}}" data-song="{{item.song}}" data-composer="{{item.composer}}" data-videosrc="{{item.video_url}}" bindtap='editVideo'></image>
+          <image class='del' src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/delete.png" mode='widthFix' data-index="{{index}}" data-id="{{item.id}}" bindtap='delVideo'></image>
+        </view>
+      </view>
+      </block>
+      <view class="empty" wx:if="{{videoList.length == 0}}">
+        <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/empty.png"></image>
+      </view>
+      <view class="jc-center marT6">
+        <span class="button4" bindtap="addVideo">添加视频</span>
+      </view>
+    </view>
+  </view>
+</view>

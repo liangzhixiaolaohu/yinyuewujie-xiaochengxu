@@ -1,0 +1,39 @@
+/* pages/ipa/ipa.wxss */
+.between{ display:flex; flex-direction:row; justify-content:space-between;}
+.justify-con-center{ display:flex; justify-content:center;}
+
+.banner{ position:relative;}
+.text{ font-size:28rpx; color:#555555; line-height: 40rpx; display:inline-block;}
+.marT25{ margin-top:25rpx;}
+.color999{ color:#999999;}
+.text-center{ text-align: center;}
+.ipa-item{ width:320rpx; height: 392rpx; display:inline-block; margin-right:20rpx;}
+.font-size-0{ font-size:0;}
+.to-user{ display:flex; margin-top:16rpx; padding-bottom:20rpx;}
+.to-user .text{ flex:1;}
+.to-user .head{ width:120rpx; height: 120rpx;}
+.quote1{ margin-right:10rpx;}
+.quote2{ display:flex; align-items:flex-end; padding-bottom:20rpx;}
+.module-title .more{ font-size:28rpx; color:#D8D8D8; display:flex; align-items:center;}
+.arrow-bottom{ width:34rpx; height: 20rpx; margin-left:10rpx;}
+.feature{ display:flex; justify-content:center;}
+.point{ font-size:0; margin-top:30rpx;}
+.point .name{ font-size:28rpx; display:block; width:144rpx; height: 48rpx; line-height: 48rpx; color:#F3BB8D; background:#333333; border-radius:3px; margin-bottom:20rpx; text-align:center;}
+.feature img{width:638rpx; height: 680rpx;}
+.vip-item{ width:400rpx; display:inline-block; margin-right:20rpx;}
+.vip-item img{ margin-bottom:20rpx;}
+.block{ display:block;}
+.block-white:nth-last-of-type(1){ margin-bottom:0;}
+
+.mask{ position:fixed; left:0; top:0; right:0; bottom:0; background: rgba(0,0,0,0.4);}
+.pop{ width:570rpx; overflow: hidden; position:fixed; left:50%; top:50%; transform: translate(-50%, -50%);}
+.pop-content{ background:#ffffff; font-size:0; overflow: hidden; padding:0 30rpx 40rpx; border-radius:0 0 5px 5px;}
+.pop .title{ width:100%; font-size:36rpx; height:160rpx; background:#303030; display:flex; justify-content:center; align-items:center; color:#F4BC8E; border-radius:5px 5px 0 0;}
+.title .name{ margin-left:20rpx;}
+.strip{ font-size:28rpx; color:#999999; padding-top:5rpx;}
+.qr-code{ text-align: center; padding:60rpx 0 50rpx;}
+.wechat-number{ display:flex; justify-content:center; align-items:center; font-size:24rpx;}
+.wechat-number .copy-btn{ display: block; width:100rpx; height:44rpx; line-height: 44rpx; border-sizing:border-box; border:2px solid #B4B4B4; text-align: center; border-radius: 22rpx/50%; margin-left:20rpx; color:#B4B4B4;}
+.pop-btn{ font-size:28rpx; color:#F3BB8D; display: block; width:240rpx; height: 64rpx; line-height:64rpx; margin:40rpx auto; background:#333333; text-align:center; border-radius:32rpx/50%;}
+.text20{ font-size:20rpx; color:#B4B4B4;}
+.pop .close{ display:flex; justify-content:center; margin-top:60rpx;}

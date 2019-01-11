@@ -1,0 +1,8 @@
+/* pages/voting-group/voting-group.wxss */
+.vh100{ min-height:100vh;}
+.group{ background:#ffffff; padding:20rpx; margin-top:20rpx; border-radius:5px; display:flex; justify-content:space-between; align-items:center;}
+.group .ranking{ margin:0 30rpx; display:flex; flex-direction:column; justify-content:space-around; flex:1;}
+.r-item{ display:flex; justify-content:space-between; align-items:center; font-size:24rpx; flex:1; color:#555555; margin:12rpx 0;}
+.r-item .title{ display:flex; align-items:center;}
+.r-item .name{ margin-left:20rpx; width:212rpx; height: 34rpx; overflow: hidden; text-overflow:ellipsis; white-space:nowrap}
+.r-item .num{ color:#FF6D43;}

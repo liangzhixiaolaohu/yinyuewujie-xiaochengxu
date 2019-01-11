@@ -1,0 +1,80 @@
+<!--pages/my/my.wxml-->
+<view class="bg">
+  <view class="wrap">
+    <view class="color-block"></view>
+    <!-- 模块 -->
+    <view class="block-white radius10 padT6 padB6">
+      <view class="head">
+        <view class="pic">
+          <image class="head-pic" src="{{avatarUrl}}" mode="aspectFill"></image>
+        </view>
+        <navigator class="pic-revise" url="../personal/personal" hover-class="none">编辑个人资料</navigator>
+      </view>
+    </view>
+    <block wx:if="{{avatarUrl}}">
+      <!-- 模块 -->
+      <view class="block-white radius10">
+        <view class="one-item">
+          <view class="item-name"><text class="name">昵称</text></view>
+          <view class="item-info"><text class="info">{{nickName}}</text></view>
+        </view>
+        <view class="one-item">
+          <view class="item-name"><text class="name">手机号码</text></view>
+          <view class="item-info"><input class="info tint" type='number' bindinput="inputValue" placeholder='未绑定'/><text class="binding" bindtap='bindCodeInput' wx:if="btnShow">发送验证码</text></view>
+        </view>
+      </view>
+      <!-- 模块 -->
+      <view class="block-white radius10">
+        <view class="one-item" catchtap='introduce'>
+          <view class="item-name"><text class="name">了解我们</text></view>
+          <view class="item-info"><text class="info"></text><image class="arrow" src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/arrow-black.png" mode="widthFix"></image></view>
+        </view>
+        <view class="one-item" style='position:relative;'>
+          <view class="item-name"><text class="name">官方微信</text></view>
+          <view class="item-info"><text class="info"></text><image class="arrow" src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/arrow-black.png" mode="widthFix"></image></view>
+          <view style="width:100%; height:100rpx; overflow:hidden; opacity:0; position:absolute; left:0; top:0;">
+          <official-account style="width:1000rpx;"></official-account>
+          </view>
+        </view>
+        <view class="one-item" catchtap='codeQr'>
+          <view class="item-name"><text class="name">下载APP</text></view>
+          <view class="item-info"><text class="info"></text><image class="arrow" src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/arrow-black.png" mode="widthFix"></image></view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='login-tips'>
+        <text class='tologin-btn' bindtap="toLogin">点击登录</text>
+        <text>可以修改资料、查看更多内容</text>
+      </view>
+    </block>
+  </view>
+  <view class='mask' wx:if="{{modalShow}}" catchtap='closeModal'>
+    <view class='modal-content' catchtap>
+      <input type='text' bindinput="bindCodeValue" placeholder='请输入验证码'/>
+      <text class='btn' catchtap="bindTelInput">立即绑定</text>
+    </view>
+  </view>
+  <!-- 弹层 -->
+  <view class="mask" wx:if="{{codeShow}}">
+    <view class="pop" catchtap>
+      <view class="title">
+        <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/code-icon.png" style="width:42rpx; height:42rpx;" mode='widthFix'></image><span class="name">扫码下载APP</span>
+      </view>
+      <view class="pop-content">
+        <view class='qr-code'>
+          <image src='https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/app-load.png' mode='widthFix' style='width:282rpx; height:276rpx;'></image>
+        </view>
+        <!-- <view class='wechat-number'>
+          <text>微信公众号: </text>
+          <text selectable="true">{{wechat}}</text>
+          <text class='copy-btn' bindtap="copyWechat">复制</text>
+        </view> -->
+        <text class='pop-btn' bindtap='savePictures'>保存为图片</text>
+      </view>
+      <view class="close" catchtap="closeCode">
+        <image src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/close2.png" style="width:64rpx; height:64rpx;"></image>
+      </view>
+    </view>
+  </view>
+</view>

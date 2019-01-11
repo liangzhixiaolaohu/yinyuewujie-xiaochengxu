@@ -1,0 +1,8 @@
+<!--pages/login/login.wxml-->
+<view class='height100'>
+  <image src='https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/logo-login.png' style="width:200rpx; height:238rpx; margin-top:140rpx;" mode='widthFix'></image>
+  <text class='tips'>申请获取你的公开信息（昵称、头像等）</text>
+  <button class='button2' open-type="getUserInfo" bindtap='isLogin' bindgetuserinfo="bindGetUser">微信授权</button>
+</view>
+
+<!--   bindgetuserinfo="bindGetUser"  -->

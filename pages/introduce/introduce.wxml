@@ -1,0 +1,45 @@
+<!--pages/introduce/introduce.wxml-->
+<view class="bg">
+  <view>
+    <!-- 简介 -->
+    <view class="block-white border-top">
+      <view class="wrap">
+        <view class="font-size-0 padB4">
+          <image class="logo marT4" src="https://image-smteat.oss-cn-beijing.aliyuncs.com/static/xiaochengxu/images/logo.png" mode="widthFix" style='width:240rpx; height:66rpx;'></image>
+          <text class="text line-height6 marT2">“音乐无界”是利博莫国际教育咨询（北京）有限公司旗下一款专注音乐留学与音乐在线教育的互联网产品，通过移动与PC相结合的方式打造全流程服务平台为国内众多音乐学习、爱好者提供专业的音乐在线教育、培训辅导、学习工具、留学规划咨询，留学办理服务与音乐赛事活动服务等业务。 </text>
+        </view>
+      </view>
+    </view>
+    <!-- 主要功能 -->
+    <view class="block-white padT4 padB4">
+      <view class="wrap">
+        <view class="func">
+          <text class="title">「音乐无界」主要功能</text>
+          <text class="name">01.音乐在线教育</text>
+          <text class="text">百所名校，千位名师提供专业的多形式音乐在线授课服务</text>
+          <text class="name">02.专业与留学评估</text>
+          <text class="text">百位专家评估团结合人工智能技术提供专业留学评估服务</text>
+          <text class="name">03.留学规划、办理与咨询</text>
+          <text class="text">专业的留学规划与辅导，无增项与全程专人办理，全天候专业的咨询服务</text>
+          <text class="name">04.IPA国际音标范读</text>
+          <text class="text">6000首音乐作品曲库，规范标准的歌词与音标，国际顶级的声乐语音指导专家范读</text>
+          <text class="name">05.专业钢琴伴奏工具</text>
+          <text class="text">4000首作品曲库，如同真人与你同台合作一般的自然、流畅</text>
+          <text class="name">06.赛事与活动</text>
+          <text class="text">公平、公正、公开的专业音乐赛事，强大、专业的评委团队，为优秀选手提供直通美国高等院校就读、求学机会</text>
+          <text class="name">07.音乐头条资讯</text>
+          <text class="text">高效、专业、新鲜的音乐头条，网罗世界各地音乐相关资讯</text>
+          <text class="name">08.个人履历空间</text>
+          <text class="text">简单、专业、美观的个人履历空间功能，轻松记录用户在学习音乐之路上的点点滴滴，向外界更好的展现自我</text>
+          <text class="title marT3">「音乐无界」</text>
+          <text class="text marT2">专业的音乐在线教育、培训辅导，留学服务领导者</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 底线 -->
+  <view class="base-line">
+    <view class="line"></view>
+    <text class="base-text">我是有底线的</text>
+  </view>
+</view>

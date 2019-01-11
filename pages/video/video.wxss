@@ -1,0 +1,22 @@
+/* pages/video/video.wxss */
+.action{ display:flex; justify-content: flex-end; padding-top:12rpx;}
+.action image{ width:28rpx; height: 28rpx; margin-left:60rpx;}
+.jc-center{ display:flex; justify-content:center;}
+
+.song-title{ padding:0 0 15rpx 20rpx; border-bottom:2px solid #F5F5F5;}
+.song-one{ padding:22rpx 40rpx; font-size:0; border-bottom:2px solid #F5F5F5;}
+.song-one .text24{ padding-top:15rpx;}
+.video{ position:relative;}
+.video .revise{ position:absolute; left:0; bottom:0; width:100%; height: 80rpx; line-height: 80rpx; font-size:28rpx; color:#F3BB8D; text-align:center; background:#333333; border-radius:0 0 5px 5px;}
+.playBtn{ position:absolute; left:50%; top:50%; width:88rpx; height:88rpx; margin:-44rpx 0 0 -44rpx;}
+video{ border-radius: 10rpx;}
+.border-box{ box-sizing:border-box;}
+.block-white:nth-last-of-type(1){ margin-bottom:0;}
+.height100{ min-height:calc(100vh - 40rpx); padding-bottom:20rpx; background: #ffffff;}
+.video-title{ padding:30rpx 0 15rpx 20rpx;}
+.video-intr{ padding:10rpx 20rpx 20rpx; border-bottom:2px solid #F5F5F5;}
+.video-intr .text24{ margin-top:12rpx;}
+.video-intr .edit,.video-intr .del{ width:28rpx; height: 28rpx;}
+
+.empty{ padding-top:70rpx; display:flex; justify-content:center;}
+.empty image{ width:336rpx; height: 220rpx;}
