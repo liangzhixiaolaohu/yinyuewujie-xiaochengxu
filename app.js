@@ -49,6 +49,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    api_url:'https://api2.yinyuewujie.com'
+    api_url:'https://yinyuewujie.com'
   }
 })
